@@ -1,0 +1,113 @@
+@model IEnumerable<PruebaTecnica.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCodigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProDescripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProDetalle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProPresentacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProMarca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProProveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCostocompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCostoventa1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCostoventa2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCanmax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProCanmini)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProActivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCodigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProDescripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProDetalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProPresentacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProProveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCostocompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCostoventa1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCostoventa2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCanmax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProCanmini)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProActivo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

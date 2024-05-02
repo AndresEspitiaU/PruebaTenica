@@ -1,0 +1,102 @@
+@model PruebaTecnica.Models.Producto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCodigo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCodigo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProDescripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProDescripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProDetalle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProDetalle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProPresentacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProPresentacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProMarca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProMarca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProProveedor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProProveedor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCostocompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCostocompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCostoventa1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCostoventa1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCostoventa2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCostoventa2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCantidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCantidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCanmax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCanmax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProCanmini)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProCanmini)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProActivo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProActivo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ProId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

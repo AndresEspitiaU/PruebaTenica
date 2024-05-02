@@ -1,0 +1,98 @@
+@model PruebaTecnica.Models.Producto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProCodigo" class="control-label"></label>
+                <input asp-for="ProCodigo" class="form-control" />
+                <span asp-validation-for="ProCodigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProNombre" class="control-label"></label>
+                <input asp-for="ProNombre" class="form-control" />
+                <span asp-validation-for="ProNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProDescripcion" class="control-label"></label>
+                <input asp-for="ProDescripcion" class="form-control" />
+                <span asp-validation-for="ProDescripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProDetalle" class="control-label"></label>
+                <input asp-for="ProDetalle" class="form-control" />
+                <span asp-validation-for="ProDetalle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProPresentacion" class="control-label"></label>
+                <input asp-for="ProPresentacion" class="form-control" />
+                <span asp-validation-for="ProPresentacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProMarca" class="control-label"></label>
+                <input asp-for="ProMarca" class="form-control" />
+                <span asp-validation-for="ProMarca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProProveedor" class="control-label"></label>
+                <input asp-for="ProProveedor" class="form-control" />
+                <span asp-validation-for="ProProveedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCostocompra" class="control-label"></label>
+                <input asp-for="ProCostocompra" class="form-control" />
+                <span asp-validation-for="ProCostocompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCostoventa1" class="control-label"></label>
+                <input asp-for="ProCostoventa1" class="form-control" />
+                <span asp-validation-for="ProCostoventa1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCostoventa2" class="control-label"></label>
+                <input asp-for="ProCostoventa2" class="form-control" />
+                <span asp-validation-for="ProCostoventa2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCantidad" class="control-label"></label>
+                <input asp-for="ProCantidad" class="form-control" />
+                <span asp-validation-for="ProCantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCanmax" class="control-label"></label>
+                <input asp-for="ProCanmax" class="form-control" />
+                <span asp-validation-for="ProCanmax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProCanmini" class="control-label"></label>
+                <input asp-for="ProCanmini" class="form-control" />
+                <span asp-validation-for="ProCanmini" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProActivo" class="control-label"></label>
+                <input asp-for="ProActivo" class="form-control" />
+                <span asp-validation-for="ProActivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

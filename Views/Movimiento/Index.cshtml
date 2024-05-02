@@ -1,0 +1,59 @@
+@model IEnumerable<PruebaTecnica.Models.Movimiento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MovFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovTipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovCantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovValor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovTipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovCantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovValor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pro.ProId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MovId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MovId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MovId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

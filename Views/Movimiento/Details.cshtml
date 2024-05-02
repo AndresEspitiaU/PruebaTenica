@@ -1,0 +1,48 @@
+@model PruebaTecnica.Models.Movimiento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movimiento</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MovFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MovFecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MovTipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MovTipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MovCantidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MovCantidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MovValor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MovValor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pro.ProId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MovId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
